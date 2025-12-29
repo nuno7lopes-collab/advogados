@@ -10,7 +10,7 @@
     />
     <link
       rel="canonical"
-      href="https://spiffy-brioche-6f500e.netlify.app/contactos.html"
+      href="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/contactos.html"
     />
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/icon.svg" />
@@ -22,11 +22,11 @@
     />
     <meta
       property="og:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
     <meta
       property="og:url"
-      content="https://spiffy-brioche-6f500e.netlify.app/contactos.html"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/contactos.html"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_PT" />
@@ -38,7 +38,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,14 +55,20 @@
     <header class="site-header">
       <nav class="nav container">
         <a class="brand" href="index.html">
-          <span class="brand-title">Dra. Manuela Florindo</span>
-          <span class="brand-sub">Advogada · Direito Civil</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">Dra. Manuela Florindo</span>
+            <span class="brand-sub">Advogada · Direito Civil</span>
+          </span>
         </a>
         <button
           class="nav-toggle"
           type="button"
           aria-expanded="false"
           aria-controls="menu"
+          aria-label="Abrir menu"
           data-nav-toggle
         >
           <span></span>
@@ -80,7 +86,7 @@
     </header>
 
     <main id="conteudo">
-      <section class="page-hero container" data-reveal>
+      <section class="page-hero container hero-scenic hero-sunset" data-reveal>
         <div>
           <p class="eyebrow">Contactos</p>
           <h1>Atendimento por marcação prévia.</h1>
@@ -92,23 +98,36 @@
 
       <section class="section container" data-reveal>
         <div class="contact-grid" data-stagger>
-          <div class="contact-card" id="telefone">
+          <a class="contact-card contact-card-link" id="telefone" href="tel:+351229518024">
             <h2>Telefone</h2>
-            <p><a href="tel:+351229518024">22 951 8024</a></p>
-          </div>
-          <div class="contact-card" id="email">
+            <p>22 951 8024</p>
+            <span class="card-action">Ligar agora</span>
+          </a>
+          <a
+            class="contact-card contact-card-link"
+            id="email"
+            href="mailto:manuela.florindo-7809p@advogados.oa.pt"
+          >
             <h2>Email</h2>
-            <p><a href="mailto:manuela.florindo-7809p@advogados.oa.pt">manuela.florindo-7809p@advogados.oa.pt</a></p>
-          </div>
-          <div class="contact-card" id="morada">
+            <p>manuela.florindo-7809p@advogados.oa.pt</p>
+            <span class="card-action">Enviar email</span>
+          </a>
+          <a
+            class="contact-card contact-card-link"
+            id="morada"
+            href="https://www.google.com/maps/search/?api=1&query=R.%20Silva%20Pinheiro%20n%C2%BA%2011%201%C2%BA%20Sala%202%2C%204450-284%20Matosinhos"
+            target="_blank"
+            rel="noopener"
+          >
             <h2>Morada</h2>
             <p>R. Silva Pinheiro n.º 11 1º Sala 2, 4450-284 Matosinhos</p>
-          </div>
+            <span class="card-action">Abrir no mapa</span>
+          </a>
         </div>
       </section>
 
-      <section class="section soft" data-reveal>
-        <div class="container map-grid" data-stagger>
+      <section class="section soft texture-surface texture-marble" data-reveal>
+        <div class="container map-showcase" data-stagger>
           <div class="map-embed" aria-label="Mapa">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.8108273450116!2d-8.6824429!3d41.182293099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246f0b7fbe18cb%3A0x5935fc714e8c3ac2!2sManuela%20Florindo%20-%20Advogada!5e0!3m2!1spt-PT!2spt!4v1767013169421!5m2!1spt-PT!2spt"
@@ -121,27 +140,42 @@
               title="Mapa do escritório"
             ></iframe>
           </div>
-          <div class="hours">
-            <figure class="photo-frame photo-frame-secondary">
+          <aside class="hours-card flag-accent flag-portugal">
+            <div class="hours-media asset-frame" data-asset="office-photo">
               <img
-                src="assets/ambiente-escritorio.png"
+                src="assets/ambiente-escritorio.jpg"
                 alt="Ambiente de escritório"
                 loading="lazy"
+                decoding="async"
+                width="1536"
+                height="1024"
               />
-            </figure>
-            <h2>Horário</h2>
-            <div class="hours-list">
-              <div><span>Segunda-feira</span><strong>10:00–19:00</strong></div>
-              <div><span>Terça-feira</span><strong>10:00–19:00</strong></div>
-              <div><span>Quarta-feira</span><strong>10:00–19:00</strong></div>
-              <div><span>Quinta-feira</span><strong>10:00–19:00</strong></div>
-              <div><span>Sexta-feira</span><strong>10:00–19:00</strong></div>
-              <div><span>Sábado</span><strong>Encerrado</strong></div>
-              <div><span>Domingo</span><strong>Encerrado</strong></div>
+              <span class="hours-badge">Matosinhos</span>
             </div>
-            <p class="note">Horário sujeito a alterações em feriados.</p>
-            <p class="note">Atendimento apenas por marcação prévia.</p>
-          </div>
+            <div class="hours-content">
+              <h2>Horário de atendimento</h2>
+              <p class="muted">
+                Escritório em Matosinhos, com atendimento por marcação prévia.
+              </p>
+              <div class="hours-list">
+                <div><span>Segunda-feira</span><strong>10:00–19:00</strong></div>
+                <div><span>Terça-feira</span><strong>10:00–19:00</strong></div>
+                <div><span>Quarta-feira</span><strong>10:00–19:00</strong></div>
+                <div><span>Quinta-feira</span><strong>10:00–19:00</strong></div>
+                <div><span>Sexta-feira</span><strong>10:00–19:00</strong></div>
+                <div><span>Sábado</span><strong>Encerrado</strong></div>
+                <div><span>Domingo</span><strong>Encerrado</strong></div>
+              </div>
+              <div class="hours-address">
+                <span>Morada</span>
+                <strong>R. Silva Pinheiro n.º 11 1º Sala 2, 4450-284 Matosinhos</strong>
+              </div>
+              <div class="hours-meta">
+                <p class="note">Horário sujeito a alterações em feriados.</p>
+                <p class="note">Atendimento apenas por marcação prévia.</p>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
     </main>

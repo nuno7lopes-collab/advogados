@@ -31,6 +31,7 @@ if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    navToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
   });
 
   document.addEventListener("click", (event) => {
@@ -41,12 +42,14 @@ if (navToggle && navLinks) {
     }
     navLinks.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Abrir menu");
   });
 
   navLinks.addEventListener("click", (event) => {
     if (event.target.tagName === "A") {
       navLinks.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Abrir menu");
     }
   });
 }

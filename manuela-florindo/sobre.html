@@ -10,7 +10,7 @@
     />
     <link
       rel="canonical"
-      href="https://spiffy-brioche-6f500e.netlify.app/sobre.html"
+      href="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/sobre.html"
     />
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/icon.svg" />
@@ -22,11 +22,11 @@
     />
     <meta
       property="og:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
     <meta
       property="og:url"
-      content="https://spiffy-brioche-6f500e.netlify.app/sobre.html"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/sobre.html"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_PT" />
@@ -38,7 +38,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,14 +55,20 @@
     <header class="site-header">
       <nav class="nav container">
         <a class="brand" href="index.html">
-          <span class="brand-title">Dra. Manuela Florindo</span>
-          <span class="brand-sub">Advogada · Direito Civil</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">Dra. Manuela Florindo</span>
+            <span class="brand-sub">Advogada · Direito Civil</span>
+          </span>
         </a>
         <button
           class="nav-toggle"
           type="button"
           aria-expanded="false"
           aria-controls="menu"
+          aria-label="Abrir menu"
           data-nav-toggle
         >
           <span></span>
@@ -83,46 +89,57 @@
       <section class="page-hero container" data-reveal>
         <div>
           <p class="eyebrow">Sobre</p>
-          <h1>Acompanhamento jurídico com rigor e proximidade.</h1>
+          <h1>Experiência jurídica com foco em clareza e confiança.</h1>
           <p class="lead">
-            Formação sólida e compromisso com uma prática clara, ética e
-            transparente.
+            Mais de 25 anos de prática em Direito Civil, com escritório em
+            Matosinhos e acompanhamento em Matosinhos e Porto.
           </p>
         </div>
       </section>
 
       <section class="section container" data-reveal>
-        <div class="about" data-stagger>
+        <div class="about about-home" data-stagger>
           <div class="about-text">
             <h2>Percurso</h2>
             <p>
-              A Dra. Manuela Florindo é advogada com formação em Direito pela
-              Universidade Portucalense e inscrição na Ordem dos Advogados com a
-              cédula profissional 7809P.
+              Com mais de 25 anos de prática em Direito Civil, a Dra.
+              Manuela Florindo acompanha casos familiares, sucessórios e
+              patrimoniais com rigor técnico e atenção ao detalhe.
             </p>
             <p>
-              O seu trabalho foca-se no Direito Civil, com atenção especial a
-              matérias familiares, sucessórias e patrimoniais. A abordagem é
-              prática e focada em clarificar opções, riscos e passos concretos.
+              O escritório está sediado em Matosinhos, com acompanhamento
+              regular em Matosinhos e Porto, sempre com comunicação clara e
+              orientação objetiva.
             </p>
             <p>
-              Cada caso é acompanhado de forma próxima, com comunicação simples
-              e respeito pelos tempos e necessidades de cada pessoa.
+              A abordagem privilegia diagnóstico preciso, estratégias realistas
+              e acompanhamento próximo durante todo o processo.
             </p>
+            <ul class="about-highlights">
+              <li>Mais de 25 anos de experiência em Direito Civil.</li>
+              <li>Escritório em Matosinhos, acompanhamento em Matosinhos e Porto.</li>
+              <li>Comunicação simples, confidencialidade e foco em soluções práticas.</li>
+            </ul>
           </div>
-          <div class="about-media">
-            <figure class="photo-frame">
+          <div class="about-media about-media-stack">
+            <figure class="photo-frame portrait-frame" data-asset="portrait">
               <img
-                src="assets/manuela-florindo.png"
+                src="assets/portrait-close.jpg"
                 alt="Dra. Manuela Florindo"
                 loading="lazy"
+                decoding="async"
+                width="1024"
+                height="1536"
               />
             </figure>
-            <figure class="photo-frame photo-frame-secondary">
+            <figure class="photo-frame photo-frame-secondary" data-asset="office">
               <img
-                src="assets/ambiente-escritorio.png"
-                alt="Ambiente de escritório"
+                src="assets/portrait-office.jpg"
+                alt="Dra. Manuela Florindo no escritório"
                 loading="lazy"
+                decoding="async"
+                width="1024"
+                height="1536"
               />
             </figure>
           </div>
@@ -150,6 +167,14 @@
           <h2>Informação profissional</h2>
         </div>
         <div class="info-grid" data-stagger>
+          <div>
+            <h3>Experiência</h3>
+            <p>Mais de 25 anos de prática em Direito Civil.</p>
+          </div>
+          <div>
+            <h3>Escritório</h3>
+            <p>Matosinhos, com acompanhamento em Matosinhos e Porto.</p>
+          </div>
           <div>
             <h3>Universidade Portucalense</h3>
             <p>Licenciatura em Direito.</p>

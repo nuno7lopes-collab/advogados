@@ -10,7 +10,7 @@
     />
     <link
       rel="canonical"
-      href="https://spiffy-brioche-6f500e.netlify.app/marcar-consulta.html"
+      href="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/marcar-consulta.html"
     />
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/icon.svg" />
@@ -22,11 +22,11 @@
     />
     <meta
       property="og:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
     <meta
       property="og:url"
-      content="https://spiffy-brioche-6f500e.netlify.app/marcar-consulta.html"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/marcar-consulta.html"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_PT" />
@@ -41,7 +41,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,14 +58,20 @@
     <header class="site-header">
       <nav class="nav container">
         <a class="brand" href="index.html">
-          <span class="brand-title">Dra. Manuela Florindo</span>
-          <span class="brand-sub">Advogada · Direito Civil</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">Dra. Manuela Florindo</span>
+            <span class="brand-sub">Advogada · Direito Civil</span>
+          </span>
         </a>
         <button
           class="nav-toggle"
           type="button"
           aria-expanded="false"
           aria-controls="menu"
+          aria-label="Abrir menu"
           data-nav-toggle
         >
           <span></span>
@@ -96,7 +102,7 @@
         </div>
       </section>
 
-      <section class="section container" data-reveal>
+      <section class="section container form-section" data-reveal>
         <div class="form-grid" data-stagger>
           <form
             id="form"
@@ -104,7 +110,7 @@
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            action="/obrigado.html"
+            action="obrigado.html"
           >
             <input type="hidden" name="form-name" value="marcacao-consulta" />
             <p class="hidden">
@@ -113,20 +119,20 @@
             <div class="form-progress"><span></span></div>
             <div class="form-step is-active" data-step="1">
               <label class="floating">
-                <input type="text" name="nome" placeholder=" " required />
+                <input type="text" name="nome" placeholder=" " autocomplete="name" required />
                 <span>Nome</span>
               </label>
               <label class="floating">
-                <input type="email" name="email" placeholder=" " required />
+                <input type="email" name="email" placeholder=" " autocomplete="email" required />
                 <span>Email</span>
               </label>
               <label class="floating">
-                <input type="tel" name="telefone" placeholder=" " required />
+                <input type="tel" name="telefone" placeholder=" " autocomplete="tel" required />
                 <span>Telemóvel</span>
               </label>
               <label class="floating">
                 <select name="area" required>
-                  <option value="">Selecionar área</option>
+                  <option value="" disabled selected></option>
                   <option>Direito da Família</option>
                   <option>Sucessões (Heranças)</option>
                   <option>Insolvências</option>
@@ -167,7 +173,7 @@
               </p>
             </div>
           </form>
-          <div class="contact-panel">
+          <div class="contact-panel texture-surface texture-leather">
             <h2>Contacto direto</h2>
             <p>
               Para uma resposta mais rápida, utilize os contactos diretos

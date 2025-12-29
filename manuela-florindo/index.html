@@ -8,7 +8,7 @@
       name="description"
       content="Advocacia em Direito Civil em Matosinhos e Porto, com acompanhamento personalizado em família, sucessões, insolvências, contratos e contencioso."
     />
-    <link rel="canonical" href="https://spiffy-brioche-6f500e.netlify.app/" />
+    <link rel="canonical" href="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/" />
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/icon.svg" />
     <meta name="theme-color" content="#0B0B0C" />
@@ -22,9 +22,9 @@
     />
     <meta
       property="og:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
-    <meta property="og:url" content="https://spiffy-brioche-6f500e.netlify.app/" />
+    <meta property="og:url" content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_PT" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,8 +38,9 @@
     />
     <meta
       name="twitter:image"
-      content="https://spiffy-brioche-6f500e.netlify.app/assets/ambiente-escritorio.png"
+      content="https://spiffy-brioche-6f500e.netlify.app/manuela-florindo/assets/ambiente-escritorio.jpg"
     />
+    <link rel="preload" as="image" href="assets/portrait-close.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,14 +56,20 @@
     <header class="site-header">
       <nav class="nav container">
         <a class="brand" href="index.html">
-          <span class="brand-title">Dra. Manuela Florindo</span>
-          <span class="brand-sub">Advogada · Direito Civil</span>
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/icon.svg" alt="" width="28" height="28" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">Dra. Manuela Florindo</span>
+            <span class="brand-sub">Advogada · Direito Civil</span>
+          </span>
         </a>
         <button
           class="nav-toggle"
           type="button"
           aria-expanded="false"
           aria-controls="menu"
+          aria-label="Abrir menu"
           data-nav-toggle
         >
           <span></span>
@@ -82,15 +89,13 @@
     <main id="conteudo">
       <section class="hero container" data-reveal>
         <div class="hero-text" data-stagger>
-          <div class="eyebrow">Matosinhos · Porto</div>
+          <div class="eyebrow">Advocacia · Direito Civil</div>
           <h1 class="hero-title">
-            Direito Civil em Matosinhos e Porto — com orientação clara do início
-            ao fim.
+            Rigor absoluto em Direito Civil.
           </h1>
-          <p class="lead">
-            Apoio jurídico em matérias de Direito Civil, com acompanhamento
-            personalizado e comunicação simples — presencialmente e, quando
-            necessário, à distância.
+          <p class="lead text-measure">
+            Mais de 25 anos de experiência, com escritório em Matosinhos e
+            atuação no Porto — presencial e online.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
@@ -102,15 +107,37 @@
               rel="noopener"
             >Enviar mensagem</a>
           </div>
-          <div class="trust-bar" data-stagger>
-            <span class="chip">Cédula OA: 7809P</span>
-            <span class="chip">Matosinhos / Porto</span>
-            <span class="chip">Atendimento por marcação</span>
-            <span class="chip">Consultas presenciais e online</span>
+          <div class="hero-highlights" data-stagger>
+            <div class="highlight-card">
+              <span>Experiência</span>
+              <strong>25+ anos em Direito Civil</strong>
+            </div>
+            <div class="highlight-card">
+              <span>Cédula OA</span>
+              <strong>7809P</strong>
+            </div>
+            <div class="highlight-card">
+              <span>Localização</span>
+              <strong>Matosinhos · Porto</strong>
+            </div>
           </div>
         </div>
         <div class="hero-panel">
-          <div class="panel-card">
+          <figure class="hero-portrait flag-accent" data-asset="hero-portrait">
+            <img
+              src="assets/portrait-close.jpg"
+              alt="Dra. Manuela Florindo"
+              width="1024"
+              height="1536"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <figcaption class="hero-portrait-meta">
+              <span>Dra. Manuela Florindo</span>
+              <strong>Advogada · Direito Civil</strong>
+            </figcaption>
+          </figure>
+          <div class="panel-card texture-surface texture-leather">
             <p class="panel-title">Agendamento rápido</p>
             <p>
               Resposta em 24–48h úteis. Em casos urgentes, contacte diretamente
@@ -130,6 +157,45 @@
         </div>
       </section>
 
+      <section class="section container prestige-section" data-reveal>
+        <div class="prestige-copy">
+          <p class="eyebrow">Excelência</p>
+          <h2>Uma prática jurídica orientada por rigor técnico e confiança.</h2>
+          <p class="text-measure">
+            Da análise inicial à representação, cada etapa é conduzida com
+            estratégia, clareza e confidencialidade. O foco está na proteção
+            dos interesses do cliente com decisões sólidas e bem fundamentadas.
+          </p>
+          <div class="prestige-list">
+            <div class="prestige-item">
+              <span>Diagnóstico</span>
+              <strong>Leitura precisa do caso e do enquadramento legal.</strong>
+            </div>
+            <div class="prestige-item">
+              <span>Estratégia</span>
+              <strong>Plano de ação realista, com objetivos claros.</strong>
+            </div>
+            <div class="prestige-item">
+              <span>Representação</span>
+              <strong>Rigor, acompanhamento e atualização contínua.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="prestige-panel texture-surface texture-leather">
+          <p class="panel-title">Áreas com maior incidência</p>
+          <ul class="prestige-tags">
+            <li>Direito da Família</li>
+            <li>Sucessões</li>
+            <li>Contratos</li>
+            <li>Imóveis e Arrendamento</li>
+            <li>Contencioso</li>
+          </ul>
+          <p class="prestige-note">
+            Atendimento por marcação, com resposta em 24–48h úteis.
+          </p>
+        </div>
+      </section>
+
       <section class="section container section-areas" data-reveal>
         <div class="section-title">
           <p>Como posso ajudar</p>
@@ -144,6 +210,9 @@
             data-when="Sempre que exista necessidade de regularização, acordo ou intervenção jurídica em matéria familiar."
             data-examples="Divórcio e separação|Responsabilidades parentais|Alimentos e regime de visitas"
           >
+            <svg class="card-icon" aria-hidden="true">
+              <use href="assets/icons.svg#icon-family"></use>
+            </svg>
             <h3>Direito da Família</h3>
             <p>
               Divórcio, responsabilidades parentais e acordos, com foco em
@@ -158,6 +227,9 @@
             data-when="Em situações de partilha, habilitação de herdeiros ou prevenção de conflitos familiares."
             data-examples="Habilitação de herdeiros|Partilhas e inventários|Testamentos e legítimas"
           >
+            <svg class="card-icon" aria-hidden="true">
+              <use href="assets/icons.svg#icon-succession"></use>
+            </svg>
             <h3>Sucessões (Heranças)</h3>
             <p>
               Partilhas, habilitações e apoio na prevenção de conflitos
@@ -172,6 +244,9 @@
             data-when="Quando existem dificuldades em cumprir obrigações financeiras e é necessário avaliar soluções legais."
             data-examples="Insolvência pessoal|Planos de pagamentos|Negociação com credores"
           >
+            <svg class="card-icon" aria-hidden="true">
+              <use href="assets/icons.svg#icon-insolvency"></use>
+            </svg>
             <h3>Insolvências</h3>
             <p>
               Orientação jurídica em situações de sobre-endividamento e
@@ -186,6 +261,9 @@
             data-when="Antes de assinar, renegociar ou esclarecer cláusulas críticas em contratos."
             data-examples="Revisão de cláusulas essenciais|Contratos de prestação de serviços|Acordos e aditamentos"
           >
+            <svg class="card-icon" aria-hidden="true">
+              <use href="assets/icons.svg#icon-contracts"></use>
+            </svg>
             <h3>Contratos</h3>
             <p>
               Revisão e elaboração de contratos para reduzir risco e
@@ -200,6 +278,9 @@
             data-when="Em situações de conflito, incumprimento ou necessidade de formalização legal."
             data-examples="Contratos de arrendamento|Incumprimentos e despejos|Condomínio e propriedade horizontal"
           >
+            <svg class="card-icon" aria-hidden="true">
+              <use href="assets/icons.svg#icon-real-estate"></use>
+            </svg>
             <h3>Imóveis e Arrendamento</h3>
             <p>
               Questões de propriedade, contratos, incumprimentos e litígios.
@@ -213,6 +294,9 @@
             data-when="Quando existe um litígio ou necessidade de responsabilização por danos."
             data-examples="Pedidos de indemnização|Responsabilidade contratual e extracontratual|Acidentes e danos patrimoniais"
           >
+            <svg class="card-icon" aria-hidden="true">
+              <use href="assets/icons.svg#icon-litigation"></use>
+            </svg>
             <h3>Contencioso / Responsabilidade Civil</h3>
             <p>
               Apoio em conflitos e pedidos de indemnização, com acompanhamento
@@ -254,32 +338,63 @@
         </div>
       </section>
 
-      <section class="section container" data-reveal>
+      <section class="section container about-section" data-reveal>
         <div class="section-title">
           <p>Sobre</p>
-          <h2>Rigor técnico com proximidade no acompanhamento jurídico.</h2>
+          <h2>Experiência sólida e acompanhamento próximo em Direito Civil.</h2>
         </div>
-        <div class="about" data-stagger>
+        <div class="about about-home" data-stagger>
           <div class="about-text">
             <p>
-              Advogada, com formação em Direito pela Universidade Portucalense e
-              inscrição na Ordem dos Advogados (cédula 7809P). O seu trabalho
-              assenta num acompanhamento jurídico próximo, com abordagem
-              prática e comunicação transparente.
+              A Dra. Manuela Florindo é advogada com mais de 25 anos de
+              experiência em Direito Civil, com escritório em Matosinhos e
+              acompanhamento regular em Matosinhos e Porto.
             </p>
+            <p>
+              Formação em Direito pela Universidade Portucalense e inscrição na
+              Ordem dos Advogados (cédula 7809P). O seu trabalho assenta numa
+              análise rigorosa, comunicação simples e orientação prática.
+            </p>
+            <ul class="about-highlights">
+              <li>Atendimento por marcação, com resposta em 24–48h úteis.</li>
+              <li>Consultas presenciais e online, conforme o caso.</li>
+              <li>Comunicação clara e acompanhamento contínuo.</li>
+            </ul>
+            <div class="quote-card">
+              <p>
+                “Cada caso merece atenção total, discrição absoluta e uma
+                estratégia clara desde o primeiro contacto.”
+              </p>
+              <span>— Dra. Manuela Florindo</span>
+            </div>
             <a class="btn btn-outline" href="sobre.html">Conhecer percurso</a>
           </div>
-          <figure class="photo-frame">
-            <img
-              src="assets/manuela-florindo.png"
-              alt="Dra. Manuela Florindo"
-              loading="lazy"
-            />
-          </figure>
+          <div class="about-media about-media-stack">
+            <figure class="photo-frame portrait-frame" data-asset="portrait">
+              <img
+                src="assets/portrait-studio.jpg"
+                alt="Dra. Manuela Florindo"
+                loading="lazy"
+                decoding="async"
+                width="1024"
+                height="1536"
+              />
+            </figure>
+            <figure class="photo-frame photo-frame-secondary" data-asset="office">
+              <img
+                src="assets/portrait-office.jpg"
+                alt="Dra. Manuela Florindo no escritório"
+                loading="lazy"
+                decoding="async"
+                width="1024"
+                height="1536"
+              />
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section class="section soft" data-reveal>
+      <section class="section soft texture-surface texture-marble" data-reveal>
         <div class="container">
           <div class="section-title">
             <p>FAQ</p>
