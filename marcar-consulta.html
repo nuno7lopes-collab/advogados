@@ -63,7 +63,18 @@
 
       <section class="section container" data-reveal>
         <div class="form-grid">
-          <form id="form">
+          <form
+            id="form"
+            name="marcacao-consulta"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/obrigado.html"
+          >
+            <input type="hidden" name="form-name" value="marcacao-consulta" />
+            <p class="hidden">
+              <label>Não preencher <input name="bot-field" /></label>
+            </p>
             <label>
               Nome
               <input type="text" name="nome" placeholder="Nome completo" required />
@@ -97,7 +108,7 @@
               ></textarea>
             </label>
             <label class="checkbox">
-              <input type="checkbox" required />
+              <input type="checkbox" name="rgpd" required />
               <span>
                 Li e aceito a <a href="privacidade.html">Política de Privacidade</a>.
               </span>

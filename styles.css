@@ -587,6 +587,10 @@ select {
   color: var(--muted);
 }
 
+.hidden {
+  display: none;
+}
+
 .legal-text h2 {
   font-size: 22px;
 }
