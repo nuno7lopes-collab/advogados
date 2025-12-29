@@ -41,7 +41,7 @@
           <a href="index.html">Início</a>
           <a href="areas.html" aria-current="page">Áreas</a>
           <a href="sobre.html">Sobre</a>
-          <a class="btn btn-gold" href="marcar-consulta.html">Marcar Consulta</a>
+          <a class="btn btn-gold btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
           <a href="contactos.html">Contactos</a>
         </div>
       </nav>
@@ -60,7 +60,7 @@
       </section>
 
       <section class="section container" data-reveal>
-        <div class="area-grid">
+        <div class="area-grid" data-stagger>
           <article class="area-card">
             <h2>Direito da Família</h2>
             <p class="area-summary">
@@ -203,7 +203,7 @@
             <h2>Precisa de orientação para o seu caso?</h2>
             <p>Agende uma consulta e esclareça dúvidas com calma.</p>
           </div>
-          <a class="btn btn-primary" href="marcar-consulta.html">Marcar Consulta</a>
+          <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
         </div>
       </section>
     </main>
@@ -224,6 +224,38 @@
         </div>
       </div>
     </footer>
+
+    <div class="contact-overlay" data-contact-overlay></div>
+    <div class="contact-fab">
+      <button class="fab-btn btn-magnetic" type="button" data-contact-toggle>
+        Contactar
+      </button>
+    </div>
+    <div class="contact-drawer" data-contact-drawer aria-hidden="true">
+      <button class="drawer-close" type="button" data-contact-close>Fechar</button>
+      <h3>Contacto direto</h3>
+      <div class="contact-list">
+        <div>
+          <span>Telefone</span>
+          <strong><a href="tel:+351229518024">22 951 8024</a></strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <strong><a href="mailto:nuno7lopes@gmail.com">nuno7lopes@gmail.com</a></strong>
+        </div>
+        <div>
+          <span>WhatsApp</span>
+          <strong>
+            <a
+              href="https://wa.me/351918557818?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta."
+              target="_blank"
+              rel="noopener"
+            >918 557 818</a>
+          </strong>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
+    </div>
 
     <script src="script.js"></script>
   </body>

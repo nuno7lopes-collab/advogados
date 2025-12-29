@@ -41,7 +41,7 @@
           <a href="index.html">Início</a>
           <a href="areas.html">Áreas</a>
           <a href="sobre.html">Sobre</a>
-          <a class="btn btn-gold" href="marcar-consulta.html" aria-current="page">
+          <a class="btn btn-gold btn-magnetic" href="marcar-consulta.html" aria-current="page">
             Marcar Consulta
           </a>
           <a href="contactos.html">Contactos</a>
@@ -62,7 +62,7 @@
       </section>
 
       <section class="section container" data-reveal>
-        <div class="form-grid">
+        <div class="form-grid" data-stagger>
           <form
             id="form"
             name="marcacao-consulta"
@@ -75,68 +75,89 @@
             <p class="hidden">
               <label>Não preencher <input name="bot-field" /></label>
             </p>
-            <label>
-              Nome
-              <input type="text" name="nome" placeholder="Nome completo" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="email@dominio.pt" required />
-            </label>
-            <label>
-              Telemóvel
-              <input type="tel" name="telefone" placeholder="+351 9xx xxx xxx" required />
-            </label>
-            <label>
-              Área de interesse
-              <select name="area" required>
-                <option value="">Selecionar área</option>
-                <option>Direito da Família</option>
-                <option>Sucessões (Heranças)</option>
-                <option>Insolvências</option>
-                <option>Contratos</option>
-                <option>Imóveis e Arrendamento</option>
-                <option>Contencioso / Responsabilidade Civil</option>
-              </select>
-            </label>
-            <label>
-              Mensagem
-              <textarea
-                name="mensagem"
-                rows="4"
-                placeholder="Breve descrição do seu caso"
-              ></textarea>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="rgpd" required />
-              <span>
-                Li e aceito a <a href="privacidade.html">Política de Privacidade</a>.
-              </span>
-            </label>
-            <button class="btn btn-primary" type="submit">Enviar pedido</button>
-            <p class="form-note">
-              Resposta em 24–48h úteis. Em casos urgentes, contacte diretamente
-              por telefone.
-            </p>
+            <div class="form-progress"><span></span></div>
+            <div class="form-step is-active" data-step="1">
+              <label class="floating">
+                <input type="text" name="nome" placeholder=" " required />
+                <span>Nome</span>
+              </label>
+              <label class="floating">
+                <input type="email" name="email" placeholder=" " required />
+                <span>Email</span>
+              </label>
+              <label class="floating">
+                <input type="tel" name="telefone" placeholder=" " required />
+                <span>Telemóvel</span>
+              </label>
+              <label class="floating">
+                <select name="area" required>
+                  <option value="">Selecionar área</option>
+                  <option>Direito da Família</option>
+                  <option>Sucessões (Heranças)</option>
+                  <option>Insolvências</option>
+                  <option>Contratos</option>
+                  <option>Imóveis e Arrendamento</option>
+                  <option>Contencioso / Responsabilidade Civil</option>
+                </select>
+                <span>Área de interesse</span>
+              </label>
+              <div class="form-actions">
+                <button class="btn btn-outline" type="button" data-step-next>
+                  Continuar
+                </button>
+              </div>
+            </div>
+            <div class="form-step" data-step="2">
+              <label class="floating">
+                <textarea name="mensagem" placeholder=" "></textarea>
+                <span>Mensagem</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="rgpd" required />
+                <span>
+                  Li e aceito a <a href="privacidade.html">Política de Privacidade</a>.
+                </span>
+              </label>
+              <div class="form-actions">
+                <button class="btn btn-outline" type="button" data-step-prev>
+                  Voltar
+                </button>
+                <button class="btn btn-primary btn-magnetic" type="submit">
+                  Enviar pedido
+                </button>
+              </div>
+              <p class="form-note">
+                Resposta em 24–48h úteis. Em casos urgentes, contacte diretamente
+                por telefone.
+              </p>
+            </div>
           </form>
           <div class="contact-panel">
             <h2>Contacto direto</h2>
             <p>
-              Para uma resposta mais rápida, utilize os contactos abaixo. Os
-              dados são placeholders e podem ser atualizados.
+              Para uma resposta mais rápida, utilize os contactos diretos
+              abaixo.
             </p>
             <div class="contact-list">
               <div>
                 <span>Telefone</span>
-                <strong>22 951 8024</strong>
+                <strong><a href="tel:+351229518024">22 951 8024</a></strong>
               </div>
               <div>
                 <span>Email</span>
-                <strong>contacto@dominio.pt</strong>
+                <strong>
+                  <a href="mailto:nuno7lopes@gmail.com">nuno7lopes@gmail.com</a>
+                </strong>
               </div>
               <div>
-                <span>Morada</span>
-                <strong>R. Silva Pinheiro n.º 11 1º Sala 2, 4450-284 Matosinhos</strong>
+                <span>WhatsApp</span>
+                <strong>
+                  <a
+                    href="https://wa.me/351918557818?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta."
+                    target="_blank"
+                    rel="noopener"
+                  >918 557 818</a>
+                </strong>
               </div>
             </div>
           </div>
@@ -160,6 +181,38 @@
         </div>
       </div>
     </footer>
+
+    <div class="contact-overlay" data-contact-overlay></div>
+    <div class="contact-fab">
+      <button class="fab-btn btn-magnetic" type="button" data-contact-toggle>
+        Contactar
+      </button>
+    </div>
+    <div class="contact-drawer" data-contact-drawer aria-hidden="true">
+      <button class="drawer-close" type="button" data-contact-close>Fechar</button>
+      <h3>Contacto direto</h3>
+      <div class="contact-list">
+        <div>
+          <span>Telefone</span>
+          <strong><a href="tel:+351229518024">22 951 8024</a></strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <strong><a href="mailto:nuno7lopes@gmail.com">nuno7lopes@gmail.com</a></strong>
+        </div>
+        <div>
+          <span>WhatsApp</span>
+          <strong>
+            <a
+              href="https://wa.me/351918557818?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta."
+              target="_blank"
+              rel="noopener"
+            >918 557 818</a>
+          </strong>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
+    </div>
 
     <script src="script.js"></script>
   </body>

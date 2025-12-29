@@ -41,7 +41,7 @@
           <a href="index.html" aria-current="page">Início</a>
           <a href="areas.html">Áreas</a>
           <a href="sobre.html">Sobre</a>
-          <a class="btn btn-gold" href="marcar-consulta.html">Marcar Consulta</a>
+          <a class="btn btn-gold btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
           <a href="contactos.html">Contactos</a>
         </div>
       </nav>
@@ -51,7 +51,7 @@
       <section class="hero container" data-reveal>
         <div class="hero-text">
           <div class="eyebrow">Matosinhos · Porto</div>
-          <h1>
+          <h1 class="hero-title">
             Direito Civil em Matosinhos e Porto — com orientação clara do início
             ao fim.
           </h1>
@@ -61,18 +61,43 @@
             necessário, à distância.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="marcar-consulta.html">Marcar Consulta</a>
-            <a class="btn btn-outline" href="contactos.html#telefone">Falar por telefone</a>
-            <a class="link" href="marcar-consulta.html#form">Enviar mensagem</a>
+            <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
+            <a class="btn btn-outline" href="tel:+351229518024">Falar por telefone</a>
+            <a
+              class="link"
+              href="https://wa.me/351918557818?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta."
+              target="_blank"
+              rel="noopener"
+            >Enviar mensagem</a>
           </div>
-          <div class="trust-bar">
+          <div class="trust-bar" data-stagger>
             <span class="chip">Cédula OA: 7809P</span>
             <span class="chip">Matosinhos / Porto</span>
             <span class="chip">Atendimento por marcação</span>
             <span class="chip">Consultas presenciais e online (se aplicável)</span>
           </div>
         </div>
-        <div class="hero-panel">
+        <div class="hero-media" data-stagger>
+          <figure class="portrait-card hero-portrait">
+            <img
+              src="assets/dra-manuela-florindo.jpg"
+              alt="Dra. Manuela Florindo, advogada em Matosinhos e Porto"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption>
+              <span>Dra. Manuela Florindo</span>
+              <span>Advogada · Direito Civil</span>
+            </figcaption>
+          </figure>
+          <figure class="hero-premium">
+            <img
+              src="assets/justica-premium.jpg"
+              alt="Detalhe de balança da justiça e martelo de juiz sobre livros"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
           <div class="panel-card">
             <p class="panel-title">Agendamento rápido</p>
             <p>
@@ -82,7 +107,7 @@
             <div class="panel-contact">
               <div>
                 <span>Telefone</span>
-                <strong>22 951 8024</strong>
+                <strong><a href="tel:+351229518024">22 951 8024</a></strong>
               </div>
               <div>
                 <span>Morada</span>
@@ -98,42 +123,90 @@
           <p>Como posso ajudar</p>
           <h2>Áreas de intervenção com foco prático e acompanhamento próximo.</h2>
         </div>
-        <div class="cards-grid">
-          <article class="card">
+        <div class="cards-grid" data-stagger>
+          <article
+            class="card"
+            data-area-card
+            data-title="Direito da Família"
+            data-when="Sempre que exista necessidade de regularização, acordo ou intervenção jurídica em matéria familiar."
+            data-examples="Divórcio e separação|Responsabilidades parentais|Alimentos e regime de visitas"
+            role="button"
+            tabindex="0"
+          >
             <h3>Direito da Família</h3>
             <p>
               Divórcio, responsabilidades parentais e acordos, com foco em
               soluções práticas.
             </p>
           </article>
-          <article class="card">
+          <article
+            class="card"
+            data-area-card
+            data-title="Sucessões (Heranças)"
+            data-when="Em situações de partilha, habilitação de herdeiros ou prevenção de conflitos familiares."
+            data-examples="Habilitação de herdeiros|Partilhas e inventários|Testamentos e legítimas"
+            role="button"
+            tabindex="0"
+          >
             <h3>Sucessões (Heranças)</h3>
             <p>
               Partilhas, habilitações e apoio na prevenção de conflitos
               familiares.
             </p>
           </article>
-          <article class="card">
+          <article
+            class="card"
+            data-area-card
+            data-title="Insolvências"
+            data-when="Quando existem dificuldades em cumprir obrigações financeiras e é necessário avaliar soluções legais."
+            data-examples="Insolvência pessoal|Planos de pagamentos|Negociação com credores"
+            role="button"
+            tabindex="0"
+          >
             <h3>Insolvências</h3>
             <p>
               Orientação jurídica em situações de sobre-endividamento e
               processos associados.
             </p>
           </article>
-          <article class="card">
+          <article
+            class="card"
+            data-area-card
+            data-title="Contratos"
+            data-when="Antes de assinar, renegociar ou esclarecer cláusulas críticas em contratos."
+            data-examples="Revisão de cláusulas essenciais|Contratos de prestação de serviços|Acordos e aditamentos"
+            role="button"
+            tabindex="0"
+          >
             <h3>Contratos</h3>
             <p>
               Revisão e elaboração de contratos para reduzir risco e
               ambiguidades.
             </p>
           </article>
-          <article class="card">
+          <article
+            class="card"
+            data-area-card
+            data-title="Imóveis e Arrendamento"
+            data-when="Em situações de conflito, incumprimento ou necessidade de formalização legal."
+            data-examples="Contratos de arrendamento|Incumprimentos e despejos|Condomínio e propriedade horizontal"
+            role="button"
+            tabindex="0"
+          >
             <h3>Imóveis e Arrendamento</h3>
             <p>
               Questões de propriedade, contratos, incumprimentos e litígios.
             </p>
           </article>
-          <article class="card">
+          <article
+            class="card"
+            data-area-card
+            data-title="Contencioso / Responsabilidade Civil"
+            data-when="Quando existe um litígio ou necessidade de responsabilização por danos."
+            data-examples="Pedidos de indemnização|Responsabilidade contratual e extracontratual|Acidentes e danos patrimoniais"
+            role="button"
+            tabindex="0"
+          >
             <h3>Contencioso / Responsabilidade Civil</h3>
             <p>
               Apoio em conflitos e pedidos de indemnização, com acompanhamento
@@ -149,24 +222,21 @@
             <p>O meu método</p>
             <h2>Processo claro para decisões informadas.</h2>
           </div>
-          <div class="steps">
-            <div class="step">
-              <div class="step-icon">1</div>
-              <div>
+          <div class="timeline" data-timeline>
+            <div class="timeline-line"><span></span></div>
+            <div class="steps" data-stagger>
+              <div class="step" data-step>
+                <span class="step-index">01</span>
                 <h3>Primeiro contacto e triagem</h3>
                 <p>Perceber o problema, o contexto e o objetivo real.</p>
               </div>
-            </div>
-            <div class="step">
-              <div class="step-icon">2</div>
-              <div>
+              <div class="step" data-step>
+                <span class="step-index">02</span>
                 <h3>Estratégia e documentação</h3>
                 <p>Organizar o essencial e definir o caminho com clareza.</p>
               </div>
-            </div>
-            <div class="step">
-              <div class="step-icon">3</div>
-              <div>
+              <div class="step" data-step>
+                <span class="step-index">03</span>
                 <h3>Acompanhamento e representação</h3>
                 <p>
                   Atualização regular e comunicação simples ao longo do
@@ -183,7 +253,7 @@
           <p>Sobre</p>
           <h2>Rigor técnico com proximidade no acompanhamento jurídico.</h2>
         </div>
-        <div class="about">
+        <div class="about" data-stagger>
           <div class="about-text">
             <p>
               Advogada, com formação em Direito pela Universidade Portucalense e
@@ -193,9 +263,14 @@
             </p>
             <a class="btn btn-outline" href="sobre.html">Conhecer percurso</a>
           </div>
-          <div class="photo-placeholder" aria-label="Fotografia da Dra. Manuela Florindo">
-            <span>Espaço reservado para fotografia</span>
-          </div>
+          <figure class="portrait-card about-portrait">
+            <img
+              src="assets/dra-manuela-florindo.jpg"
+              alt="Dra. Manuela Florindo em ambiente profissional"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </section>
 
@@ -205,7 +280,7 @@
             <p>FAQ</p>
             <h2>Dúvidas frequentes sobre o primeiro contacto.</h2>
           </div>
-          <div class="faq">
+          <div class="faq" data-stagger>
             <details>
               <summary>Como funciona a primeira consulta?</summary>
               <p>
@@ -252,9 +327,21 @@
             <h2>Precisa de orientação jurídica?</h2>
             <p>Marque uma consulta e esclareça o seu caso com calma.</p>
           </div>
-          <a class="btn btn-primary" href="marcar-consulta.html">Marcar Consulta</a>
+          <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
         </div>
       </section>
+      <div class="area-modal" data-area-modal aria-hidden="true">
+        <div class="area-overlay" data-area-overlay></div>
+        <div class="area-drawer" role="dialog" aria-modal="true" aria-labelledby="area-title">
+          <button class="area-close" type="button" data-area-close>Fechar</button>
+          <h3 id="area-title" data-area-title></h3>
+          <div class="area-subtitle">Quando faz sentido procurar apoio</div>
+          <p data-area-when></p>
+          <div class="area-subtitle">Exemplos de temas</div>
+          <ul data-area-examples></ul>
+          <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -273,6 +360,38 @@
         </div>
       </div>
     </footer>
+
+    <div class="contact-overlay" data-contact-overlay></div>
+    <div class="contact-fab">
+      <button class="fab-btn btn-magnetic" type="button" data-contact-toggle>
+        Contactar
+      </button>
+    </div>
+    <div class="contact-drawer" data-contact-drawer aria-hidden="true">
+      <button class="drawer-close" type="button" data-contact-close>Fechar</button>
+      <h3>Contacto direto</h3>
+      <div class="contact-list">
+        <div>
+          <span>Telefone</span>
+          <strong><a href="tel:+351229518024">22 951 8024</a></strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <strong><a href="mailto:nuno7lopes@gmail.com">nuno7lopes@gmail.com</a></strong>
+        </div>
+        <div>
+          <span>WhatsApp</span>
+          <strong>
+            <a
+              href="https://wa.me/351918557818?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta."
+              target="_blank"
+              rel="noopener"
+            >918 557 818</a>
+          </strong>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
+    </div>
 
     <script src="script.js"></script>
   </body>

@@ -41,7 +41,7 @@
           <a href="index.html">Início</a>
           <a href="areas.html">Áreas</a>
           <a href="sobre.html" aria-current="page">Sobre</a>
-          <a class="btn btn-gold" href="marcar-consulta.html">Marcar Consulta</a>
+          <a class="btn btn-gold btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
           <a href="contactos.html">Contactos</a>
         </div>
       </nav>
@@ -60,7 +60,7 @@
       </section>
 
       <section class="section container" data-reveal>
-        <div class="about">
+        <div class="about" data-stagger>
           <div class="about-text">
             <h2>Percurso</h2>
             <p>
@@ -78,9 +78,14 @@
               e respeito pelos tempos e necessidades de cada pessoa.
             </p>
           </div>
-          <div class="photo-placeholder" aria-label="Fotografia da Dra. Manuela Florindo">
-            <span>Espaço reservado para fotografia</span>
-          </div>
+          <figure class="portrait-card about-portrait">
+            <img
+              src="assets/dra-manuela-florindo.jpg"
+              alt="Dra. Manuela Florindo em ambiente profissional"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </section>
 
@@ -90,7 +95,7 @@
             <p>Princípios de trabalho</p>
             <h2>Um método assente em ética e confiança.</h2>
           </div>
-          <div class="principles">
+          <div class="principles" data-stagger>
             <div class="principle">Clareza</div>
             <div class="principle">Rigor</div>
             <div class="principle">Proximidade</div>
@@ -104,7 +109,7 @@
           <p>Formação e inscrição</p>
           <h2>Informação profissional</h2>
         </div>
-        <div class="info-grid">
+        <div class="info-grid" data-stagger>
           <div>
             <h3>Universidade Portucalense</h3>
             <p>Licenciatura em Direito.</p>
@@ -122,7 +127,7 @@
             <h2>Quer esclarecer o seu caso?</h2>
             <p>Agende uma consulta e receba orientação com calma.</p>
           </div>
-          <a class="btn btn-primary" href="marcar-consulta.html">Marcar Consulta</a>
+          <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
         </div>
       </section>
     </main>
@@ -143,6 +148,38 @@
         </div>
       </div>
     </footer>
+
+    <div class="contact-overlay" data-contact-overlay></div>
+    <div class="contact-fab">
+      <button class="fab-btn btn-magnetic" type="button" data-contact-toggle>
+        Contactar
+      </button>
+    </div>
+    <div class="contact-drawer" data-contact-drawer aria-hidden="true">
+      <button class="drawer-close" type="button" data-contact-close>Fechar</button>
+      <h3>Contacto direto</h3>
+      <div class="contact-list">
+        <div>
+          <span>Telefone</span>
+          <strong><a href="tel:+351229518024">22 951 8024</a></strong>
+        </div>
+        <div>
+          <span>Email</span>
+          <strong><a href="mailto:nuno7lopes@gmail.com">nuno7lopes@gmail.com</a></strong>
+        </div>
+        <div>
+          <span>WhatsApp</span>
+          <strong>
+            <a
+              href="https://wa.me/351918557818?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta."
+              target="_blank"
+              rel="noopener"
+            >918 557 818</a>
+          </strong>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-magnetic" href="marcar-consulta.html">Marcar Consulta</a>
+    </div>
 
     <script src="script.js"></script>
   </body>
