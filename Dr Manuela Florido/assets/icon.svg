@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="MF">
+  <rect width="200" height="200" rx="36" fill="#0B0B0C" />
+  <text
+    x="50%"
+    y="54%"
+    text-anchor="middle"
+    font-size="84"
+    font-family="Playfair Display, serif"
+    fill="#C8A35C"
+    letter-spacing="6"
+  >
+    MF
+  </text>
+</svg>

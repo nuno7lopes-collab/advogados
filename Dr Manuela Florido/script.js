@@ -7,14 +7,25 @@ window.addEventListener("DOMContentLoaded", () => {
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
+let isTicking = false;
 
 const handleScrollState = () => {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+  isTicking = false;
 };
 
 handleScrollState();
-window.addEventListener("scroll", handleScrollState, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(handleScrollState);
+      isTicking = true;
+    }
+  },
+  { passive: true }
+);
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
@@ -102,44 +113,82 @@ if (timeline) {
   window.addEventListener("resize", updateTimeline);
 }
 
-const magneticButtons = document.querySelectorAll(".btn-magnetic");
-const prefersPointer = window.matchMedia("(pointer: fine)");
-
-if (prefersPointer.matches) {
-  magneticButtons.forEach((button) => {
-    button.addEventListener("mousemove", (event) => {
-      const rect = button.getBoundingClientRect();
-      const x = event.clientX - rect.left - rect.width / 2;
-      const y = event.clientY - rect.top - rect.height / 2;
-      const limit = 5;
-      button.style.setProperty("--mx", `${(x / rect.width) * limit}px`);
-      button.style.setProperty("--my", `${(y / rect.height) * limit}px`);
-    });
-
-    button.addEventListener("mouseleave", () => {
-      button.style.setProperty("--mx", "0px");
-      button.style.setProperty("--my", "0px");
-    });
-  });
-}
-
 const areaCards = document.querySelectorAll("[data-area-card]");
 const areaModal = document.querySelector("[data-area-modal]");
 const areaOverlay = document.querySelector("[data-area-overlay]");
+const areaDrawer = document.querySelector("[data-area-drawer]");
 const areaClose = document.querySelector("[data-area-close]");
 const areaTitle = document.querySelector("[data-area-title]");
 const areaWhen = document.querySelector("[data-area-when]");
 const areaExamples = document.querySelector("[data-area-examples]");
+
+const focusableSelector =
+  "a[href], button, textarea, input, select, [tabindex]:not([tabindex='-1'])";
+
+const trapFocus = (container) => {
+  const focusable = Array.from(container.querySelectorAll(focusableSelector)).filter(
+    (element) => !element.hasAttribute("disabled")
+  );
+  if (!focusable.length) {
+    return () => {};
+  }
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  const handleKey = (event) => {
+    if (event.key !== "Tab") return;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
+  container.addEventListener("keydown", handleKey);
+  return () => container.removeEventListener("keydown", handleKey);
+};
+
+const createFocusManager = () => {
+  let cleanup = null;
+  let returnFocus = null;
+
+  return {
+    activate: (container, initialFocus) => {
+      returnFocus = document.activeElement;
+      if (cleanup) cleanup();
+      cleanup = trapFocus(container);
+      if (initialFocus) {
+        initialFocus.focus();
+      }
+    },
+    deactivate: () => {
+      if (cleanup) cleanup();
+      cleanup = null;
+      if (returnFocus && returnFocus.focus) {
+        returnFocus.focus();
+      }
+      returnFocus = null;
+    },
+  };
+};
+
+const modalFocus = createFocusManager();
+const drawerFocus = createFocusManager();
 
 const closeAreaModal = () => {
   if (!areaModal) return;
   areaModal.classList.remove("open");
   body.classList.remove("modal-open");
   areaModal.setAttribute("aria-hidden", "true");
+  modalFocus.deactivate();
 };
 
 const openAreaModal = (card) => {
-  if (!areaModal || !areaTitle || !areaWhen || !areaExamples) return;
+  if (!areaModal || !areaTitle || !areaWhen || !areaExamples || !areaDrawer) {
+    return;
+  }
   areaTitle.textContent = card.dataset.title || "";
   areaWhen.textContent = card.dataset.when || "";
   areaExamples.innerHTML = "";
@@ -149,19 +198,17 @@ const openAreaModal = (card) => {
     li.textContent = example;
     areaExamples.appendChild(li);
   });
+  if (typeof card.focus === "function") {
+    card.focus({ preventScroll: true });
+  }
   areaModal.classList.add("open");
   body.classList.add("modal-open");
   areaModal.setAttribute("aria-hidden", "false");
+  modalFocus.activate(areaDrawer, areaClose);
 };
 
 areaCards.forEach((card) => {
   card.addEventListener("click", () => openAreaModal(card));
-  card.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      openAreaModal(card);
-    }
-  });
 });
 
 if (areaOverlay) {
@@ -173,18 +220,29 @@ const contactDrawer = document.querySelector("[data-contact-drawer]");
 const contactOverlay = document.querySelector("[data-contact-overlay]");
 const contactClose = document.querySelector("[data-contact-close]");
 
+const openContactDrawer = () => {
+  if (!contactDrawer || !contactOverlay) return;
+  contactDrawer.classList.add("open");
+  contactOverlay.classList.add("open");
+  contactDrawer.setAttribute("aria-hidden", "false");
+  drawerFocus.activate(contactDrawer, contactClose);
+};
+
 const closeContactDrawer = () => {
   if (!contactDrawer || !contactOverlay) return;
   contactDrawer.classList.remove("open");
   contactOverlay.classList.remove("open");
   contactDrawer.setAttribute("aria-hidden", "true");
+  drawerFocus.deactivate();
 };
 
 const toggleContactDrawer = () => {
   if (!contactDrawer || !contactOverlay) return;
-  const isOpen = contactDrawer.classList.toggle("open");
-  contactOverlay.classList.toggle("open", isOpen);
-  contactDrawer.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  if (contactDrawer.classList.contains("open")) {
+    closeContactDrawer();
+  } else {
+    openContactDrawer();
+  }
 };
 
 if (contactToggle) {
