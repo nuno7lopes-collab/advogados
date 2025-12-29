@@ -424,30 +424,6 @@ ul {
   animation-delay: -5s;
 }
 
-.hero-proof {
-  margin-top: 22px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  padding: 16px 18px;
-}
-
-.hero-proof strong {
-  display: block;
-  font-size: 16px;
-  color: var(--text);
-  letter-spacing: 0.5px;
-}
-
-.proof-label {
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
 .glass {
   background: var(--glass);
   border: 1px solid var(--border);
@@ -552,13 +528,6 @@ ul {
   flex-wrap: wrap;
 }
 
-.note {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.6px;
-  color: var(--muted);
-}
-
 .signal-card {
   border-radius: 20px;
   padding: 20px 22px;
@@ -615,27 +584,6 @@ ul {
   color: var(--accent);
   margin-bottom: 12px;
   display: block;
-}
-
-.case-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.case-stats span {
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
-.case-stats strong {
-  color: var(--text);
-  font-size: 15px;
 }
 
 .case-visual {
@@ -1037,14 +985,6 @@ ul {
 
   .nav {
     gap: 16px;
-  }
-
-  .hero-proof {
-    grid-template-columns: 1fr;
-  }
-
-  .case-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-actions,

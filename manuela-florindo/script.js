@@ -7,11 +7,16 @@ window.addEventListener("DOMContentLoaded", () => {
 const header = document.querySelector(".site-header");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
+const contactFab = document.querySelector(".contact-fab");
 let isTicking = false;
 
 const handleScrollState = () => {
-  if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
+  if (header) {
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  }
+  if (contactFab) {
+    contactFab.classList.toggle("is-visible", window.scrollY > 140);
+  }
   isTicking = false;
 };
 
